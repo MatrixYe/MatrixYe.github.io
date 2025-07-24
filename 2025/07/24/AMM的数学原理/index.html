@@ -20,16 +20,16 @@
   <title>AMM的数学原理 - Matrix.Ye'Blog</title>
 
   
-    <meta name="description" content="1. 恒定乘积公式$$ x \cdot y &#x3D; k$$  x：池中代币 A 的数量（如 SUI） y：池中代币 B 的数量（如 USDC） k：池的恒定乘积（表示池的总流动性）  任意交易必须满足公式 $x \cdot y &#x3D; k$，代币 A 和 B 的比例变化会调整价格，但 k 在没有流动性变动的情况下保持不变。 2. 价格计算AMM 中的代币价格由两种代币的比例决定 A 的">
+    <meta name="description" content="1. 恒定乘积公式$$x \cdot y &#x3D; k$$  x：池中代币 A 的数量（如 SUI） y：池中代币 B 的数量（如 USDC） k：池的恒定乘积（表示池的总流动性）  任意交易必须满足公式 $x \cdot y &#x3D; k$，代币 A 和 B 的比例变化会调整价格，但 k 在没有流动性变动的情况下保持不变。 2. 价格计算AMM 中的代币价格由两种代币的比例决定 A 的价">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AMM的数学原理">
 <meta property="og:url" content="https://matrixye.github.io/2025/07/24/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/">
 <meta property="og:site_name" content="Matrix.Ye&#39;Blog">
-<meta property="og:description" content="1. 恒定乘积公式$$ x \cdot y &#x3D; k$$  x：池中代币 A 的数量（如 SUI） y：池中代币 B 的数量（如 USDC） k：池的恒定乘积（表示池的总流动性）  任意交易必须满足公式 $x \cdot y &#x3D; k$，代币 A 和 B 的比例变化会调整价格，但 k 在没有流动性变动的情况下保持不变。 2. 价格计算AMM 中的代币价格由两种代币的比例决定 A 的">
+<meta property="og:description" content="1. 恒定乘积公式$$x \cdot y &#x3D; k$$  x：池中代币 A 的数量（如 SUI） y：池中代币 B 的数量（如 USDC） k：池的恒定乘积（表示池的总流动性）  任意交易必须满足公式 $x \cdot y &#x3D; k$，代币 A 和 B 的比例变化会调整价格，但 k 在没有流动性变动的情况下保持不变。 2. 价格计算AMM 中的代币价格由两种代币的比例决定 A 的价">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://matrixye.github.io/images/avatar.png">
 <meta property="article:published_time" content="2025-07-24T12:24:18.000Z">
-<meta property="article:modified_time" content="2025-07-24T12:25:43.451Z">
+<meta property="article:modified_time" content="2025-07-24T12:34:21.082Z">
 <meta property="article:author" content="Matrix.Ye">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="交易">
@@ -50,7 +50,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-24T20:24:18+08:00","dateModified":"2025-07-24T20:25:43+08:00","datePublished":"2025-07-24T20:24:18+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/2025/07/24/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/2025/07/24/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/","keywords":"区块链, 交易","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-24T20:24:18+08:00","dateModified":"2025-07-24T20:34:21+08:00","datePublished":"2025-07-24T20:24:18+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/2025/07/24/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/2025/07/24/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/","keywords":"区块链, 交易","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" />
 </head>
 <body>
@@ -82,7 +82,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-24T12:24:18.000Z">2025-07-24</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-07-24T12:25:43.451Z">2025-07-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-24T12:24:18.000Z">2025-07-24</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-07-24T12:34:21.082Z">2025-07-24</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,8 +93,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="1-恒定乘积公式"><a href="#1-恒定乘积公式" class="headerlink" title="1. 恒定乘积公式"></a>1. 恒定乘积公式</h2><p>$$</p>
-<p>x \cdot y &#x3D; k<br>$$</p>
+  </div><article class="md-text content"><h2 id="1-恒定乘积公式"><a href="#1-恒定乘积公式" class="headerlink" title="1. 恒定乘积公式"></a>1. 恒定乘积公式</h2><p>$$<br>x \cdot y &#x3D; k<br>$$</p>
 <ul>
 <li>x：池中代币 A 的数量（如 SUI）</li>
 <li>y：池中代币 B 的数量（如 USDC）</li>
@@ -103,74 +102,55 @@
 <p>任意交易必须满足公式 $x \cdot y &#x3D; k$，代币 A 和 B 的比例变化会调整价格，但 k 在没有流动性变动的情况下保持不变。</p>
 <h2 id="2-价格计算"><a href="#2-价格计算" class="headerlink" title="2. 价格计算"></a>2. 价格计算</h2><p>AMM 中的代币价格由两种代币的比例决定</p>
 <p>A 的价格（以 B 为单位）：</p>
-<p>$$</p>
-<p>P_A &#x3D; \frac{y}{x}<br>$$</p>
+<p>$$<br>P_A &#x3D; \frac{y}{x}<br>$$</p>
 <p>B的价格（以A为单位）：</p>
 <p>$$<br>P_B&#x3D;\frac{x}{y}<br>$$</p>
 <p>价格与池中代币的比例直接相关,每次交易都会改变池中代币的比例，从而调整价。</p>
 <h2 id="3-Swap"><a href="#3-Swap" class="headerlink" title="3. Swap"></a>3. Swap</h2><p>用户通过往池中支付一种代币，来换取另一种代币。</p>
 <p>假设用户使用B来购买A，即支付 $\Delta y$ 个 B 来买入 $\Delta x$ 个 A，交换之后，交易池中的A和B的数量更新为 $x{\prime}$ , $y\prime$</p>
-<p>$$</p>
-<p>x{\prime} &#x3D; x - \Delta x, \y{\prime} &#x3D; y + \Delta y<br>$$</p>
+<p>$$<br>x{\prime} &#x3D; x - \Delta x, \ y{\prime} &#x3D; y + \Delta y<br>$$</p>
 <p>根据恒定乘积公式</p>
-<p>$$</p>
-<p>x{\prime} \cdot y{\prime} &#x3D;x\cdot y&#x3D; k<br>$$</p>
+<p>$$<br>x{\prime} \cdot y{\prime} &#x3D;x\cdot y&#x3D; k<br>$$</p>
 <p>计算swap过程中的数量变化</p>
-<p>$$</p>
-<p>(x - \Delta x) \cdot (y + \Delta y) &#x3D; k<br>$$</p>
+<p>$$<br>(x - \Delta x) \cdot (y + \Delta y) &#x3D; k<br>$$</p>
 <p>可计算得到用户输入数量 $\Delta y$ 的B后，得到的  $\Delta x$数量的A</p>
-<p>$$</p>
-<p>\Delta x &#x3D; x - \frac{k}{y + \Delta y}<br>$$</p>
+<p>$$<br>\Delta x &#x3D; x - \frac{k}{y + \Delta y}<br>$$</p>
 <p>交易之后价格产生变化</p>
 <p>$$<br>P_A{\prime} &#x3D; \frac{y{\prime}}{x{\prime}}<br>$$</p>
 <p>滑点定义为交易前后价格的相对变化</p>
-<p>$$</p>
-<p>\text{slip point} &#x3D; \frac{P_A{\prime} - P_A}{P_A}<br>$$</p>
+<p>$$<br>\text{slip point} &#x3D; \frac{P_A{\prime} - P_A}{P_A}<br>$$</p>
 <p>反之，如果使用A换B，那么根据公式</p>
-<p>$$</p>
-<p>(x + \Delta x) \cdot (y - \Delta y) &#x3D; k<br>$$</p>
+<p>$$<br>(x + \Delta x) \cdot (y - \Delta y) &#x3D; k<br>$$</p>
 <p>用户得到的B的数量为</p>
-<p>$$</p>
-<p>\Delta y &#x3D; y - \frac{k}{x + \Delta x}<br>$$</p>
+<p>$$<br>\Delta y &#x3D; y - \frac{k}{x + \Delta x}<br>$$</p>
 <h2 id="4-添加流动性"><a href="#4-添加流动性" class="headerlink" title="4. 添加流动性"></a>4. 添加流动性</h2><p>流动性提供者向池中增加代币 A 和 B，流动性乘积 k 随之变化。</p>
 <p>流动性必须按当前比例添加</p>
-<p>$$</p>
-<p>\frac{\Delta x}{x} &#x3D; \frac{\Delta y}{y}<br>$$</p>
+<p>$$<br>\frac{\Delta x}{x} &#x3D; \frac{\Delta y}{y}<br>$$</p>
 <p>添加流动性后，新的池状态：</p>
-<p>$$</p>
-<p>x{\prime} &#x3D; x + \Delta x, \quad y{\prime} &#x3D; y + \Delta y<br>$$</p>
+<p>$$<br>x{\prime} &#x3D; x + \Delta x, \quad y{\prime} &#x3D; y + \Delta y<br>$$</p>
 <p>添加流动性之后，K值会变大：</p>
-<p>$$</p>
-<p>k{\prime} &#x3D; x{\prime} \cdot y{\prime}&#x3D;(x + \Delta x) \cdot (y + \Delta y)<br>$$</p>
+<p>$$<br>k{\prime} &#x3D; x{\prime} \cdot y{\prime}&#x3D;(x + \Delta x) \cdot (y + \Delta y)<br>$$</p>
 <h2 id="5-移除流动性"><a href="#5-移除流动性" class="headerlink" title="5. 移除流动性"></a>5. 移除流动性</h2><p>流动性提供者从池中移除代币 A 和 B，流动性乘积 k 减小。</p>
-<p>$$</p>
-<p>\frac{\Delta x}{x} &#x3D; \frac{\Delta y}{y}<br>$$</p>
+<p>$$<br>\frac{\Delta x}{x} &#x3D; \frac{\Delta y}{y}<br>$$</p>
 <p>移除流动性后，池中的代币数量变化:</p>
-<p>$$</p>
-<p>x{\prime} &#x3D; x - \Delta x, \quad y{\prime} &#x3D; y - \Delta y<br>$$</p>
+<p>$$<br>x{\prime} &#x3D; x - \Delta x, \quad y{\prime} &#x3D; y - \Delta y<br>$$</p>
 <p>新的恒定乘积:</p>
-<p>$$</p>
-<p>k{\prime} &#x3D; x{\prime} \cdot y{\prime}&#x3D;(x - \Delta x) \cdot (y - \Delta y)<br>$$</p>
+<p>$$<br>k{\prime} &#x3D; x{\prime} \cdot y{\prime}&#x3D;(x - \Delta x) \cdot (y - \Delta y)<br>$$</p>
 <h2 id="6-无常损失"><a href="#6-无常损失" class="headerlink" title="6. 无常损失"></a>6. 无常损失</h2><p>在 AMM 池中提供流动性时，与直接持有代币相比，因价格变化而导致的潜在收益损失即为无常损失。</p>
 <p>$P_0$：代币 A 相对于 B 的初始价格，即 $P_0 &#x3D; \frac{y}{x}$</p>
 <p>$P_1$：价格变化后代币 A 的新价格，即 $P_1 &#x3D; \frac{y{\prime}}{x{\prime}}$</p>
 <p>价格变化比例为$r:$</p>
-<p>$$<br> r &#x3D; \frac{P_1}{P_0}<br>$$</p>
+<p>$$<br>r &#x3D; \frac{P_1}{P_0}<br>$$</p>
 <p>在池外直接持有代币的价值：</p>
-<p>$$</p>
-<p>V_{\text{HODL}} &#x3D; x_0 \cdot P_0 + y_0<br>$$</p>
+<p>$$<br>V_{\text{HODL}} &#x3D; x_0 \cdot P_0 + y_0<br>$$</p>
 <p>在池内提供流动性的价值：</p>
-<p>$$</p>
-<p>x_{\text{LP}} &#x3D; \sqrt{\frac{k}{P_1}}, \quad y_{\text{LP}} &#x3D; \sqrt{k \cdot P_1}<br>$$</p>
+<p>$$<br>x_{\text{LP}} &#x3D; \sqrt{\frac{k}{P_1}}, \quad y_{\text{LP}} &#x3D; \sqrt{k \cdot P_1}<br>$$</p>
 <p>提供流动性后的总价值为</p>
-<p>$$</p>
-<p>V_{\text{AMM}} &#x3D; x_{\text{LP}} \cdot P_1 + y_{\text{LP}}<br>$$</p>
+<p>$$<br>V_{\text{AMM}} &#x3D; x_{\text{LP}} \cdot P_1 + y_{\text{LP}}<br>$$</p>
 <p>LP 在 AMM 中提供流动性与直接持有代币价值的相对损失：</p>
-<p>$$</p>
-<p>IL&#x3D; \frac{V_{\text{AMM}} - V_{\text{HODL}}}{V_{\text{HODL}}}<br>$$</p>
+<p>$$<br>IL&#x3D; \frac{V_{\text{AMM}} - V_{\text{HODL}}}{V_{\text{HODL}}}<br>$$</p>
 <p>简化公式得到:</p>
-<p>$$</p>
-<p>\text{无常损失（IL）} &#x3D; 2 \cdot \sqrt{r} \cdot \frac{1}{r+1} - 1<br>$$</p>
+<p>$$<br>\text{无常损失（IL）} &#x3D; 2 \cdot \sqrt{r} \cdot \frac{1}{r+1} - 1<br>$$</p>
 <p>r &#x3D; 1（价格不变）时，无常损失为 0，r 偏离 1 越多，无常损失越大。</p>
 </article>
 <div class="article-footer">

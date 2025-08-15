@@ -23,13 +23,13 @@
     <meta name="description" content="uniswap v2的数学原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AMM的数学原理">
-<meta property="og:url" content="https://matrixye.github.io/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/">
+<meta property="og:url" content="https://matrixye.github.io/posts/a5238cf/">
 <meta property="og:site_name" content="Matrix.Ye&#39;Blog">
 <meta property="og:description" content="uniswap v2的数学原理">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://matrixye.github.io/images/avatar.png">
 <meta property="article:published_time" content="2025-07-29T03:52:07.000Z">
-<meta property="article:modified_time" content="2025-08-13T06:22:10.585Z">
+<meta property="article:modified_time" content="2025-08-15T15:19:13.913Z">
 <meta property="article:author" content="Matrix.Ye">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="交易">
@@ -51,7 +51,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-29T11:52:07+08:00","dateModified":"2025-08-13T14:22:10+08:00","datePublished":"2025-07-29T11:52:07+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/","keywords":"区块链, 交易, uniswap","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-29T11:52:07+08:00","dateModified":"2025-08-15T23:19:13+08:00","datePublished":"2025-07-29T11:52:07+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/posts/a5238cf/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/posts/a5238cf/","keywords":"区块链, 交易, uniswap","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
 </head>
 <body>
@@ -70,7 +70,7 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/08/15/%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E7%86%B5%E7%9A%84%E6%8E%A8%E5%AF%BC/"><span class="title">克劳修斯熵的推导</span></a><a class="item title" href="/2025/08/14/%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E7%86%B5%E7%9A%84%E6%8E%A8%E5%AF%BC/"><span class="title">玻尔兹曼熵的推导</span></a><a class="item title" href="/2025/07/27/%E3%80%8A%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E7%90%86%E8%AE%BA%E7%9A%84%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E3%80%8B%E7%BF%BB%E8%AF%91/"><span class="title">《形式语言理论的安全应用》翻译</span></a><a class="item title" href="/2025/08/13/%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%E8%A1%A8/"><span class="title">常用数学符号对照表</span></a><a class="item title" href="/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/"><span class="title">AMM的数学原理</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/fbe65218/"><span class="title">《形式语言理论的安全应用》翻译</span></a><a class="item title" href="/posts/5d325937/"><span class="title">玻尔兹曼熵的推导</span></a><a class="item title" href="/posts/5159d9fb/"><span class="title">常用数学符号对照表</span></a><a class="item title" href="/posts/53cd2f75/"><span class="title">克劳修斯熵的推导</span></a><a class="item title" href="/posts/a5238cf/"><span class="title">AMM的数学原理</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -83,7 +83,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-29T03:52:07.000Z">2025-07-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-13T06:22:10.585Z">2025-08-13</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-29T03:52:07.000Z">2025-07-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-15T15:19:13.913Z">2025-08-15</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -220,25 +220,25 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
     <section id="share">
       <div class="header"><span>分享文章</span></div>
       <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://matrixye.github.io/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" /></div>
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://matrixye.github.io/posts/a5238cf/" /></div>
         <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://matrixye.github.io/2025/07/29/AMM%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/"/>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://matrixye.github.io/posts/a5238cf/"/>
         </div>
         
       </div>
     </section>
     </div>
 
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2025/08/13/%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%E8%A1%A8/">常用数学符号对照表</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/07/27/%E3%80%8A%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E7%90%86%E8%AE%BA%E7%9A%84%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E3%80%8B%E7%BF%BB%E8%AF%91/">《形式语言理论的安全应用》翻译</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/5159d9fb/">常用数学符号对照表</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/fbe65218/">《形式语言理论的安全应用》翻译</a></div></section></div>
 
 <div class="related-wrap" id="related-posts">
     <section class='header'>
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="/2025/08/15/克劳修斯熵的推导/" title="克劳修斯熵的推导"><span class="title">克劳修斯熵的推导</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="/posts/5d325937/" title="玻尔兹曼熵的推导"><span class="title">玻尔兹曼熵的推导</span></a></div></section></div>
 
 
   <div class="related-wrap md-text" id="comments">

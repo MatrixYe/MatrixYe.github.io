@@ -42,7 +42,7 @@
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --accent: #ff5724;
+  --accent: #ff5b24;
   --link: hsla(207deg 90% 54% / 1);
   --link-a20: hsla(207deg 90% 54% / 0.2);
   --background: hsla(210deg 20% 98% / 1);
@@ -356,7 +356,7 @@
   --link-a20: hsla(192deg 95% 32% / 0.2);
 }
 .colorful[color='accent'] {
-  --hue: 14deg;
+  --hue: 15deg;
   --sat: 100%;
   --light: 57%;
   --alpha: 1;
@@ -364,19 +364,19 @@
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --link: hsla(14deg 100% 57% / 1);
-  --link-a20: hsla(14deg 100% 57% / 0.2);
-  --theme-border: hsla(14deg 50% 80% / var(--alpha));
-  --theme-block: hsla(14deg 90% 92% / var(--alpha));
-  --theme-mark: hsla(14deg 95% 80% / var(--alpha));
-  --theme-codeblock: hsla(14deg 50% 95% / var(--alpha));
-  --text: hsla(14deg 55% 16% / 1);
-  --text-p1: hsla(14deg 90% 20% / 1);
-  --text-p2: hsla(14deg 90% 20% / 0.8);
-  --text-p3: hsla(14deg 90% 20% / 0.6);
-  --text-p4: hsla(14deg 90% 20% / 0.4);
-  --link: hsla(14deg 95% 32% / 1);
-  --link-a20: hsla(14deg 95% 32% / 0.2);
+  --link: hsla(15deg 100% 57% / 1);
+  --link-a20: hsla(15deg 100% 57% / 0.2);
+  --theme-border: hsla(15deg 50% 80% / var(--alpha));
+  --theme-block: hsla(15deg 90% 92% / var(--alpha));
+  --theme-mark: hsla(15deg 95% 80% / var(--alpha));
+  --theme-codeblock: hsla(15deg 50% 95% / var(--alpha));
+  --text: hsla(15deg 55% 16% / 1);
+  --text-p1: hsla(15deg 90% 20% / 1);
+  --text-p2: hsla(15deg 90% 20% / 0.8);
+  --text-p3: hsla(15deg 90% 20% / 0.6);
+  --text-p4: hsla(15deg 90% 20% / 0.4);
+  --link: hsla(15deg 95% 32% / 1);
+  --link-a20: hsla(15deg 95% 32% / 0.2);
 }
 .colorful[color='light'] {
   --theme: #fff;
@@ -1551,8 +1551,8 @@ pre:not([class]):has(>code) {
   line-height: 1.5;
 }
 .md-text .highlight >table::-webkit-scrollbar {
-  height: 0px;
-  width: 0px;
+  height: 4px;
+  width: 4px;
 }
 .md-text .highlight >table::-webkit-scrollbar-track-piece,
 .md-text .highlight >table::-webkit-scrollbar-corner {
@@ -8260,7 +8260,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   display: inline-block;
   width: 12px;
   height: 1.2em;
-  background: #ff5724;
+  background: #ff5b24;
   transform: skewX(-20deg);
   margin: 0 0.5em;
   vertical-align: top;

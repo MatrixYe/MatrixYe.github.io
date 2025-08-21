@@ -20,16 +20,16 @@
   <title>AMM的数学原理 - Matrix.Ye'Blog</title>
 
   
-    <meta name="description" content="uniswap v2的数学原理">
+    <meta name="description" content="uniswap-v2 的数学原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AMM的数学原理">
 <meta property="og:url" content="https://matrixye.github.io/posts/a5238cf/">
 <meta property="og:site_name" content="Matrix.Ye&#39;Blog">
-<meta property="og:description" content="uniswap v2的数学原理">
+<meta property="og:description" content="uniswap-v2 的数学原理">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://matrixye.github.io/images/avatar.png">
 <meta property="article:published_time" content="2025-07-29T03:52:07.000Z">
-<meta property="article:modified_time" content="2025-08-15T15:19:13.913Z">
+<meta property="article:modified_time" content="2025-08-19T19:38:00.544Z">
 <meta property="article:author" content="Matrix.Ye">
 <meta property="article:tag" content="区块链">
 <meta property="article:tag" content="交易">
@@ -51,7 +51,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-29T11:52:07+08:00","dateModified":"2025-08-15T23:19:13+08:00","datePublished":"2025-07-29T11:52:07+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/posts/a5238cf/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/posts/a5238cf/","keywords":"区块链, 交易, uniswap","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-07-29T11:52:07+08:00","dateModified":"2025-08-20T03:38:00+08:00","datePublished":"2025-07-29T11:52:07+08:00","description":"","headline":"AMM的数学原理","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/posts/a5238cf/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/posts/a5238cf/","keywords":"区块链, 交易, uniswap","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
 </head>
 <body>
@@ -59,7 +59,7 @@
 <div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Matrix.Ye'Blog</div><div class="sub cap">记录代码与人生</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Matrix.Ye'Blog</div><div class="sub cap">北海的冰雪下，盛开的梅花</div></a></div></header>
 
 <div class="nav-area">
 
@@ -70,7 +70,7 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/fbe65218/"><span class="title">《形式语言理论的安全应用》翻译</span></a><a class="item title" href="/posts/5d325937/"><span class="title">玻尔兹曼熵的推导</span></a><a class="item title" href="/posts/5159d9fb/"><span class="title">常用数学符号对照表</span></a><a class="item title" href="/posts/53cd2f75/"><span class="title">克劳修斯熵的推导</span></a><a class="item title" href="/posts/a5238cf/"><span class="title">AMM的数学原理</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/5d325937/"><span class="title">玻尔兹曼熵的推导</span></a><a class="item title" href="/posts/53cd2f75/"><span class="title">克劳修斯熵的推导</span></a><a class="item title" href="/posts/5159d9fb/"><span class="title">常用数学符号对照表</span></a><a class="item title" href="/posts/fbe65218/"><span class="title">《形式语言理论的安全应用》翻译</span></a><a class="item title" href="/posts/e96a455a/"><span class="title">状态量和过程量的区别</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -83,7 +83,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-29T03:52:07.000Z">2025-07-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-15T15:19:13.913Z">2025-08-15</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-07-29T03:52:07.000Z">2025-07-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-19T19:38:00.544Z">2025-08-20</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -238,7 +238,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="/posts/5d325937/" title="玻尔兹曼熵的推导"><span class="title">玻尔兹曼熵的推导</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="/posts/53cd2f75/" title="克劳修斯熵的推导"><span class="title">克劳修斯熵的推导</span><span class="excerpt">本文属于知识点笔记，针对熵的起源问题，从卡诺循环出发，逐步推导出克劳修斯熵的数学定义，并简略分析它的物理学意义。</span></a></div></section></div>
 
 
   <div class="related-wrap md-text" id="comments">

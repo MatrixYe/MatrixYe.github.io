@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,25 +17,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>标签：交易 - Matrix.Ye'Blog</title>
+  <title>状态量和过程量的区别 - Matrix.Ye'Blog</title>
 
   
-    <meta name="description" content="北海的冰雪下，盛开的梅花">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Matrix.Ye&#39;Blog">
-<meta property="og:url" content="https://matrixye.github.io/tags/%E4%BA%A4%E6%98%93/">
+    <meta name="description" content="这篇文章属于知识点笔记，针对状态量和过程的区别，从定义、特征、数学形式三个方面进行了对比，最后通过一个现实生活中爬山的例子进行类比说明。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="状态量和过程量的区别">
+<meta property="og:url" content="https://matrixye.github.io/posts/e96a455a/">
 <meta property="og:site_name" content="Matrix.Ye&#39;Blog">
-<meta property="og:description" content="北海的冰雪下，盛开的梅花">
+<meta property="og:description" content="这篇文章属于知识点笔记，针对状态量和过程的区别，从定义、特征、数学形式三个方面进行了对比，最后通过一个现实生活中爬山的例子进行类比说明。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://matrixye.github.io/images/avatar.png">
+<meta property="article:published_time" content="2025-08-21T03:37:05.000Z">
+<meta property="article:modified_time" content="2025-08-20T17:31:37.000Z">
 <meta property="article:author" content="Matrix.Ye">
-<meta property="article:tag" content="比特币,区块链,技术,博客">
+<meta property="article:tag" content="知识点">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://matrixye.github.io/images/avatar.png">
   
   
   
-  <meta name="keywords" content="比特币,区块链,技术,博客">
+  <meta name="keywords" content="知识点">
 
   <!-- feed -->
   
@@ -47,12 +49,12 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://matrixye.github.io","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"name":"Matrix.Ye'Blog","description":"北海的冰雪下，盛开的梅花","url":"https://matrixye.github.io"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png"},"dateCreated":"2025-08-21T11:37:05+08:00","dateModified":"2025-08-21T01:31:37+08:00","datePublished":"2025-08-21T11:37:05+08:00","description":"","headline":"状态量和过程量的区别","mainEntityOfPage":{"@type":"WebPage","@id":"https://matrixye.github.io/posts/e96a455a/"},"publisher":{"@type":"Organization","name":"Matrix.Ye","sameAs":[],"image":"/images/avatar.png","logo":{"@type":"ImageObject","url":"/images/avatar.png"}},"url":"https://matrixye.github.io/posts/e96a455a/","keywords":"知识点","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css">
 </head>
 <body>
 
-<div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Matrix.Ye'Blog</div><div class="sub cap">北海的冰雪下，盛开的梅花</div></a></div></header>
@@ -64,29 +66,117 @@
 <div class="widgets">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
+
+
 <widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/5d325937/"><span class="title">玻尔兹曼熵的推导</span></a><a class="item title" href="/posts/53cd2f75/"><span class="title">克劳修斯熵的推导</span></a><a class="item title" href="/posts/5159d9fb/"><span class="title">常用数学符号对照表</span></a><a class="item title" href="/posts/fbe65218/"><span class="title">《形式语言理论的安全应用》翻译</span></a><a class="item title" href="/posts/e96a455a/"><span class="title">状态量和过程量的区别</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Matrix.Ye'Blog</div><div class="sub cap">北海的冰雪下，盛开的梅花</div></a></div></header>
-
- 
 
 
 
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：交易</a><a href="/topic/">专栏</a><a href="/archives/">归档</a></nav></div></div></div>
-<div class="post-list post"><a class="post-card post" href="/posts/a5238cf/">
-<article class="md-text"><h2 class="post-title">AMM的数学原理</h2><div class="excerpt"><p>uniswap-v2 的数学原理</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-07-29T03:52:07.000Z">2025-07-29</time></span></div></article>
-</a></div>
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/%E7%89%A9%E7%90%86%E5%AD%A6/">物理学</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-08-21T03:37:05.000Z">2025-08-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-20T17:31:37.000Z">2025-08-21</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>状态量和过程量的区别</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>这篇文章属于知识点笔记，针对状态量和过程的区别，从定义、特征、数学形式三个方面进行了对比，最后通过一个现实生活中爬山的例子进行类比说明。</p>
+<hr />
+<h2 id="一-定义对比与典型示例"><a class="markdownIt-Anchor" href="#一-定义对比与典型示例"></a> 一、定义对比与典型示例</h2>
+<p>状态量描述系统在特定时刻或位置的物理属性，其值仅由当前状态决定，与历史路径无关。例如力学中的位置、速度、动量、动能、势能等；热力学中的温度、压强、体积、内能；电磁学中的电场强度、电势。</p>
+<p>过程量描述系统状态变化过程的物理量，其值取决于状态变化的路径，与时间或空间累积相关。例如力学中的位移、功、冲量；热力学中的热量、做功；电磁学中的电流做功。</p>
+<p>总之，状态量是某个瞬间的快照，而过程量是某个时间段的累积。</p>
+<hr />
+<h2 id="二-核心特性对比"><a class="markdownIt-Anchor" href="#二-核心特性对比"></a> 二、核心特性对比</h2>
+<h3 id="1-对路径的依赖特性"><a class="markdownIt-Anchor" href="#1-对路径的依赖特性"></a> 1. 对路径的依赖特性</h3>
+<p>状态量仅仅初始状态和结束状态，过程量不仅与初始状态和结束状态有关，也和具体的运动过程有关。</p>
+<h3 id="2-与时间或时刻的关系"><a class="markdownIt-Anchor" href="#2-与时间或时刻的关系"></a> 2. 与时间或时刻的关系</h3>
+<p>状态量与时刻对应，比如瞬时速度，表示某一时刻位移对时间的微分。过程量与时间间隔对应，比如平均速度是总位移与时间间隔的商。</p>
+<h3 id="3-闭合路径积分"><a class="markdownIt-Anchor" href="#3-闭合路径积分"></a> 3. 闭合路径积分</h3>
+<p>任何状态量的闭合路径积分恒定为 0，比如内能变化在循环过程中归零。过程量的闭合路径积分不一定为 0，而是与具体的闭合曲线形状相关。</p>
+<hr />
+<h2 id="三-数学形式对比"><a class="markdownIt-Anchor" href="#三-数学形式对比"></a> 三、数学形式对比</h2>
+<h3 id="1-微分形式"><a class="markdownIt-Anchor" href="#1-微分形式"></a> 1. 微分形式</h3>
+<p>状态量的微分是全微分，用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 表示，比如内能的变化 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">dU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span>。<br />
+过程量的微分是非全微分，用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> 表示，比如微笑的热量传递 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>Q</mi></mrow><annotation encoding="application/x-tex">\delta Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mord mathnormal">Q</span></span></span></span> 。</p>
+<h3 id="2-积分形式"><a class="markdownIt-Anchor" href="#2-积分形式"></a> 2. 积分形式</h3>
+<p>状态量的积分与路径没有关系，只和初始化状态有关比如内能的变化 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><mi>d</mi><mi>U</mi></mrow><mo>=</mo><msub><mi>U</mi><mi>b</mi></msub><mo>−</mo><msub><mi>U</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">\int_{a}^b {dU}=U_{b}-U_{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.399828em;vertical-align:-0.35582em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.044008em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.2579000000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><br />
+过程量的积分与路径有关，在求积分时需要指定积分路径，比如力的做功 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><mo>=</mo><mover accent="true"><mi>F</mi><mo>⃗</mo></mover><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\int_{C}=\vec{F}ds</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1608200000000002em;vertical-align:-0.35582em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.12251099999999993em;"><span style="top:-2.34418em;margin-left:-0.19445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35582em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9663299999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9663299999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.15216em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width='0.471em' height='0.714em' style='width:0.471em' viewBox='0 0 471 714' preserveAspectRatio='xMinYMin'><path d='M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">s</span></span></span></span></p>
+<p>状态量的闭合路径积分恒定为 0，过程量的闭合路径积分不一定为 0 (与具体的路径方程有关)</p>
+<h3 id="偏导数形式"><a class="markdownIt-Anchor" href="#偏导数形式"></a> 偏导数形式</h3>
+<p>状态量可以定义偏导数，过程量不可定义偏导数，没有意义。</p>
+<p>总之，从数学形式上看，状态量是态函数，可以表示为状态空间参数的函数。而过程量就不是一个具体函数了，它是一个路径积分，需要通过参数化路径进行计算。</p>
+<hr />
+<h2 id="四-现实世界中的例子"><a class="markdownIt-Anchor" href="#四-现实世界中的例子"></a> 四、现实世界中的例子</h2>
+<p>以登山为例，两个人从相同的地方出发，通过不同的路线登上同一个山顶。那么对于个人而言，海拔就是状态量，路程就是过程量。两个人采用不同的方式上山，海拔的变化是相同的，但路程却不一样，这就是状态量的变化只和初末位置有关，过程量的变化与路径有关。两个人都从各自的路径下山，回到最开始出发的地方，海拔的变化为 0，而路程的变化却不为 0，这就是状态量的闭合路径积分为 0，而过程量的闭合路径积分不一定为 0.</p>
+</article>
+<div class="article-footer">
+
+
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://matrixye.github.io/posts/e96a455a/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://matrixye.github.io/posts/e96a455a/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/e4c0f79c/">比特币的工作量并非时间的投入（草稿）</a></div></section></div>
+
+<div class="related-wrap" id="related-posts"></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="MatrixYe/MatrixYe.github.io" data-repo-id="R_kgDOPN_A9g" data-category="Announcements" data-category-id="DIC_kwDOPN_A9s4CtEgk" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" data-reply-enabled="1       <!-- 启用回复功能 -->" data-thread-replies="1       <!-- 启用线程化嵌套回复 --"></div>
+
+    </section>
+  </div>
+
 
 
 <footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:2;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/_post/categories/">分类</a><a href="/_post/tags/">标签</a><a href="/_post/archives/">归档</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/wiki/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">开源项目</a><a href="/wiki/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a><a href="/wiki/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序</a><a href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a></div></div><div class="text"><p>本站由 <a href="/">Matrix.Ye</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br />
 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%AE%9A%E4%B9%89%E5%AF%B9%E6%AF%94%E4%B8%8E%E5%85%B8%E5%9E%8B%E7%A4%BA%E4%BE%8B"><span class="toc-text"> 一、定义对比与典型示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94"><span class="toc-text"> 二、核心特性对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AF%B9%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BE%9D%E8%B5%96%E7%89%B9%E6%80%A7"><span class="toc-text"> 1. 对路径的依赖特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8E%E6%97%B6%E9%97%B4%E6%88%96%E6%97%B6%E5%88%BB%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text"> 2. 与时间或时刻的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%97%AD%E5%90%88%E8%B7%AF%E5%BE%84%E7%A7%AF%E5%88%86"><span class="toc-text"> 3. 闭合路径积分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E6%95%B0%E5%AD%A6%E5%BD%A2%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="toc-text"> 三、数学形式对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-text"> 1. 微分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-text"> 2. 积分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%8F%E5%AF%BC%E6%95%B0%E5%BD%A2%E5%BC%8F"><span class="toc-text"> 偏导数形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E4%B8%AD%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text"> 四、现实世界中的例子</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -580,6 +670,30 @@
 
 
 <!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
 
 
 
